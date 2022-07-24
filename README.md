@@ -6,10 +6,10 @@
 
 > Let's start by reviewing this template, which we will need in the project.
 
-- [X] Create a window; 
+- [X] Create a application window; 
 - [X] Assign an icon to it; 
 - [X] Fill the background of the window with gray color; 
-- [X] Assign the name of the window, which is displayed in the middle at the top of the window; 
+- [X] Assign the name, which is displayed in the middle at the top of the window; 
 - [X] Set the window size; 
 - [X] Prohibit changing window sizes with the last command.
 ```python
