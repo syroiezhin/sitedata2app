@@ -52,13 +52,13 @@ def func():
     if info.get().replace(' ', '') == '': pass
     elif bttn['state'] == tk.NORMAL: bttn['state'] = tk.DISABLED
 ```
-> 2. The pre-created second button will return the first button to its previous status, for the next launch of the program's functionality, which is not implemented in this version of the project. Be sure to clear the input field and the output field of the results of the program after pressing the __RESULT__ button.
+> 2. The pre-created second button (__RERUN__) will return the first button to its previous status, for the next launch of the program's functionality, which is not implemented in this version of the project. Be sure to clear the input field and the output field of the results of the program after pressing the __RESULT__ button.
 ```python
 def reboot():
     bttn['state'] = tk.NORMAL
     lbl['text'] = ''
     data.delete(0, tk.END)
 ```
-> I share this simple template with you so that you save time. The file __tk-wbs-ip.py__ will not be used in the project, for this I will create a copy called __tk_wbs_IP.py__ and improve the code. My project will use a second python file called __wbs_IP.py__, which in turn has evolved from the __website-IP.py__ file. Let's start by analyzing the simplified version of the code, which is also not used in the main project, but it is important for us to understand the code.
+> I share this simple template with you so that you save time. The file __tk-wbs-ip.py__ will not be used in the project, for this I will create a copy called __final-draft/tk_wbs_IP.py__ and improve the code. My project will use a second python file called __final-draft/wbs_IP.py__, which in turn has evolved from the __website-IP.py__ file. Let's start by analyzing the simplified version of the code, which is also not used in the main project, but it is important for us to understand the code.
 
 [⇪](#UP)
