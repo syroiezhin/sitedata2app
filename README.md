@@ -4,6 +4,8 @@
 
 ## <p align="center">Give thanks : 5168 7450 1701 5535 <a href="https://en.privatbank.ua/all-ways-to-receive-send-an-international-transfer"><img src="https://upload.wikimedia.org/wikipedia/uk/f/ff/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9F%D1%80%D0%B8%D0%B2%D0%B0%D1%8224.png" width = "25" alt="Privat Bank UA"> </a></p>
 
+### tk-wbs-ip.py
+
 > Let's start by reviewing this template, which we will need in the project.
 
 - [X] Create a application window; 
@@ -60,6 +62,8 @@ def reboot():
     data.delete(0, tk.END)
 ```
 > I share this simple template with you so that you save time. The file __tk-wbs-ip.py__ will not be used in the project, for this I will create a copy called __final-draft/tk_wbs_IP.py__ and improve the code. My project will use a second python file called __final-draft/wbs_IP.py__, which in turn has evolved from the __website-IP.py__ file. Let's start by analyzing the simplified version of the code, which is also not used in the main project, but it is important for us to understand the code.
+
+### website-IP.py
 
 - [X] To get the ip address of the site use `socket.gethostbyname()` passing it a link to the site.
 - [X] Sends an HTTP request to the specified site and receives a JSON object of the result.
