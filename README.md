@@ -61,4 +61,23 @@ def reboot():
 ```
 > I share this simple template with you so that you save time. The file __tk-wbs-ip.py__ will not be used in the project, for this I will create a copy called __final-draft/tk_wbs_IP.py__ and improve the code. My project will use a second python file called __final-draft/wbs_IP.py__, which in turn has evolved from the __website-IP.py__ file. Let's start by analyzing the simplified version of the code, which is also not used in the main project, but it is important for us to understand the code.
 
+- [X] To get the ip address of the site use `socket.gethostbyname()` passing it a link to the site.
+- [X] Sends an HTTP request to the specified site and receives a JSON object of the result.
+```python
+requests.get(url=f'http://ip-api.com/json/{ip}').json()
+```
+- [X] Сollect data from the received json list using the get() request.
+- [X] Now we can create an html map with the obtained coordinates of the owner of the IP address:
+```python
+marker = folium.Map(location=[lat,lon], zoom_start=13, tiles= "CartoDB dark_matter")
+folium.CircleMarker(location=[lat,lon], popup = f"{org}<br/>{reg}", radius=50, line_color='#3186cc', fill_color='#3186cc').add_to(marker)
+marker.save(f'{os.getcwd()}/map_{ip}.html', 'wb')
+```
+- [X] In order to see the result of our program, I made the launch of html page for instant viewing.
+```python
+option = webdriver.ChromeOptions()
+        option.add_argument("user-agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:84.0) Gecko/20100101 Firefox/84.0")
+        driver = webdriver.Chrome(service=Service(f"/USER/v.syroiezhin/.wdm/drivers/chromedriver/mac64/103.0.5060.53/chromedriver"), options=option)
+        driver.get("file://" + f"/USER/v.syroiezhin/{html_file}")
+```
 [⇪](#UP)
