@@ -8,7 +8,6 @@
 
 >
 
-<embed type="image/svg+xml" src="https://drive.google.com/file/d/1ttJXRv-unOHvObapUWrJvJ4zw8GQlqB7/view" />
-<embed type="image/svg+xml" href="https://drive.google.com/file/d/1ttJXRv-unOHvObapUWrJvJ4zw8GQlqB7/view" />
+<embed type="image/svg+xml" src="image.svg" />
 
 [⇪](#UP)
