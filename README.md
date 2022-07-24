@@ -8,6 +8,6 @@
 
 >
 
-<embed type="image/svg+xml" src="image.svg" />
+<embed type="image/svg+xml" src="https://github.com/syroiezhin/website-IP/blob/main/image.svg" />
 
 [⇪](#UP)
