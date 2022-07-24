@@ -1,15 +1,15 @@
 # <p id="UP">Do you want to create your first macbook app file?</p>
 
-> To create our first working project using py2app for macbook, we will use a ready-made template called "tk-wbs-ip.py" written using only the Tkinter library to create a simple and useful interface. Then we use it in a more advanced program that extracts information about the owner of the entered domain (getting the site's IP address).
+> To create our first working project using py2app for macbook, we will use a ready-made template called __tk-wbs-ip.py__ written using only the Tkinter library to create a simple and useful interface. Then we use it in a final program that extracts information about the owner of the entered domain (getting the site's IP address). The final version is in the final-draft folder.
 
 ## <p align="center">Give thanks : 5168 7450 1701 5535 <a href="https://en.privatbank.ua/all-ways-to-receive-send-an-international-transfer"><img src="https://upload.wikimedia.org/wikipedia/uk/f/ff/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9F%D1%80%D0%B8%D0%B2%D0%B0%D1%8224.png" width = "25" alt="Privat Bank UA"> </a></p>
 
 > Let's start by reviewing this template, which we will need in the project.
 
-- [X] Create a window; 
+- [X] Create a application window; 
 - [X] Assign an icon to it; 
 - [X] Fill the background of the window with gray color; 
-- [X] Assign the name of the window, which is displayed in the middle at the top of the window; 
+- [X] Assign the name, which is displayed in the middle at the top of the window; 
 - [X] Set the window size; 
 - [X] Prohibit changing window sizes with the last command.
 ```python
@@ -52,13 +52,13 @@ def func():
     if info.get().replace(' ', '') == '': pass
     elif bttn['state'] == tk.NORMAL: bttn['state'] = tk.DISABLED
 ```
-> 2. The pre-created second button will return the first button to its previous status, for the next launch of the program's functionality, which is not implemented in this version of the project. Be sure to clear the input field and the output field of the results of the program after pressing the __RESULT__ button.
+> 2. The pre-created second button (__RERUN__) will return the first button (__RESULT__) to its previous status, for the next launch of the program's functionality. After pressing the __RESULT__ button, the input field and the output field of the program result are cleared.
 ```python
 def reboot():
     bttn['state'] = tk.NORMAL
     lbl['text'] = ''
     data.delete(0, tk.END)
 ```
-> I share this simple template with you so that you save time. The file __tk-wbs-ip.py__ will not be used in the project, for this I will create a copy called __tk_wbs_IP.py__ and improve the code. My project will use a second python file called __wbs_IP.py__, which in turn has evolved from the __website-IP.py__ file. Let's start by analyzing the simplified version of the code, which is also not used in the main project, but it is important for us to understand the code.
+> I share this simple template with you so that you save time. The file __tk-wbs-ip.py__ will not be used in the project, for this I will create a copy called __final-draft/tk_wbs_IP.py__ and improve the code. My project will use a second python file called __final-draft/wbs_IP.py__, which in turn has evolved from the __website-IP.py__ file. Let's start by analyzing the simplified version of the code, which is also not used in the main project, but it is important for us to understand the code.
 
 [⇪](#UP)
