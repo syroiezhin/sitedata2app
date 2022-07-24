@@ -52,7 +52,7 @@ def func():
     if info.get().replace(' ', '') == '': pass
     elif bttn['state'] == tk.NORMAL: bttn['state'] = tk.DISABLED
 ```
-> 2. The pre-created second button (__RERUN__) will return the first button to its previous status, for the next launch of the program's functionality, which is not implemented in this version of the project. Be sure to clear the input field and the output field of the results of the program after pressing the __RESULT__ button.
+> 2. The pre-created second button (__RERUN__) will return the first button (__RESULT__) to its previous status, for the next launch of the program's functionality, which is not implemented in this version of the project. Be sure to clear the input field and the output field of the results of the program after pressing the __RESULT__ button.
 ```python
 def reboot():
     bttn['state'] = tk.NORMAL
