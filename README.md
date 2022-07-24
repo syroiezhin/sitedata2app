@@ -5,6 +5,7 @@
 ## <p align="center">Give thanks : 5168 7450 1701 5535 <a href="https://en.privatbank.ua/all-ways-to-receive-send-an-international-transfer"><img src="https://upload.wikimedia.org/wikipedia/uk/f/ff/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9F%D1%80%D0%B8%D0%B2%D0%B0%D1%8224.png" width = "25" alt="Privat Bank UA"> </a></p>
 
 > Let's start by reviewing this template, which we will need in the project.
+
 - [X] Create a window; 
 - [X] Assign an icon to it; 
 - [X] Fill the background of the window with gray color; 
@@ -19,6 +20,7 @@ win.title('DATA SEARCH BY URL')
 win.geometry(f"{wdth}x{hght}")
 win.resizable(False,False)
 ```
+
 - [X] Create a variable in which we will write the contents of the Entry();
 - [X] Сreate an entry field into which something will be entered;
 - [X] You can set focus to this field to position the cursor inside the field on startup;
@@ -29,5 +31,34 @@ data = tk.Entry(bg='#cfaf32', textvariable=info)
 data.focus()
 data.pack(padx=wdth/3, fill='x', pady=pdy, side='top')
 ```
+
+> Similarly to the above example, we create two buttons and a text field to test the program's performance.
+```python
+bttn = tk.Button( win, text="RESULT", highlightbackground='#2f3f4f', command = func, font=fnt, compound=tk.CENTER, state=tk.NORMAL)
+bttn.pack(padx=wdth/3, fill='x', side='top')
+    
+lbl = tk.Label(win, bg='#2f3f4f', fg='#cfaf32', font=f'Helvetica {fnt} bold')
+lbl.pack(padx=wdth/3,fill='x', pady=pdy)
+    
+rerun = tk.Button(text="RERUN", highlightbackground='#2f3f4f', command = reboot, font=fnt, compound=tk.CENTER, state=tk.NORMAL)
+rerun.pack(padx=wdth/3, fill='x', pady=pdy, side=tk.BOTTOM)
+```
+
+> Now it remains for us to create functions for each of the buttons so that they implement simple functionality, namely:
+> 1. For the __RESULT__ button, we will display the entered text in the __Label__ field to make sure that we can use the received value from the __Entry__ in some way in the future. Also, it will be important for us to process the received value of __info__, and for this we can consider the case when only spaces will be entered in the field. We need to block the button after clicking, so that the program will take up its task, which we will implement in the final project.
+```python
+def func(): 
+    lbl['text'] = info.get()
+    if info.get().replace(' ', '') == '': pass
+    elif bttn['state'] == tk.NORMAL: bttn['state'] = tk.DISABLED
+```
+> 2. The pre-created second button will return the first button to its previous status, for the next launch of the program's functionality, which is not implemented in this version of the project. Be sure to clear the input field and the output field of the results of the program after pressing the __RESULT__ button.
+```python
+def reboot():
+    bttn['state'] = tk.NORMAL
+    lbl['text'] = ''
+    data.delete(0, tk.END)
+```
+### I share this simple template with you so that you save time. The file "tk-wbs-ip.py" will not be used in the project, for this I will create a copy called "tk_wbs_IP.py" and improve the code. My project will use a second python file called "wbs_IP.py", which in turn has evolved from the "website-IP.py" file. Let's start by analyzing the simplified version of the code, which is also not used in the main project, but it is important for us to understand the code.
 
 [⇪](#UP)
