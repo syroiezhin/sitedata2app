@@ -9,7 +9,8 @@
 - [X] Assign an icon to it; 
 - [X] Fill the background of the window with gray color; 
 - [X] Assign the name of the window, which is displayed in the middle at the top of the window; 
-- [X] Set the window size; Prohibit changing window sizes with the last command.
+- [X] Set the window size; 
+- [X] Prohibit changing window sizes with the last command.
 ```python
 win = tk.Tk()
 win.iconphoto(False,tk.PhotoImage(file='icon.png'))
@@ -18,4 +19,15 @@ win.title('DATA SEARCH BY URL')
 win.geometry(f"{wdth}x{hght}")
 win.resizable(False,False)
 ```
+- [X] Create a variable in which we will write the contents of the Entry();
+- [X] Сreate an entry field into which something will be entered;
+- [X] You can set focus to this field to position the cursor inside the field on startup;
+- [X] Be sure to specify where to display this element, otherwise it will not be visible in the window.
+```python
+info = tk.StringVar()
+data = tk.Entry(bg='#cfaf32', textvariable=info)
+data.focus()
+data.pack(padx=wdth/3, fill='x', pady=pdy, side='top')
+```
+
 [⇪](#UP)
