@@ -5,7 +5,11 @@
 ## <p align="center">Give thanks : 5168 7450 1701 5535 <a href="https://en.privatbank.ua/all-ways-to-receive-send-an-international-transfer"><img src="https://upload.wikimedia.org/wikipedia/uk/f/ff/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%9F%D1%80%D0%B8%D0%B2%D0%B0%D1%8224.png" width = "25" alt="Privat Bank UA"> </a></p>
 
 > Let's start by reviewing this template, which we will need in the project.
-- [X] Create a window; Assign an icon to it; Fill the background of the window with gray color; Assign the name of the window, which is displayed in the middle at the top of the window; Set the window size; Prohibit changing window sizes with the last command.
+- [X] Create a window; 
+- [X] Assign an icon to it; 
+- [X] Fill the background of the window with gray color; 
+- [X] Assign the name of the window, which is displayed in the middle at the top of the window; 
+- [X] Set the window size; Prohibit changing window sizes with the last command.
 ```python
 win = tk.Tk()
 win.iconphoto(False,tk.PhotoImage(file='icon.png'))
