@@ -59,6 +59,6 @@ def reboot():
     lbl['text'] = ''
     data.delete(0, tk.END)
 ```
-### I share this simple template with you so that you save time. The file "tk-wbs-ip.py" will not be used in the project, for this I will create a copy called "tk_wbs_IP.py" and improve the code. My project will use a second python file called "wbs_IP.py", which in turn has evolved from the "website-IP.py" file. Let's start by analyzing the simplified version of the code, which is also not used in the main project, but it is important for us to understand the code.
+### I share this simple template with you so that you save time. The file __tk-wbs-ip.py__ will not be used in the project, for this I will create a copy called __tk_wbs_IP.py__ and improve the code. My project will use a second python file called __wbs_IP.py__, which in turn has evolved from the __website-IP.py__ file. Let's start by analyzing the simplified version of the code, which is also not used in the main project, but it is important for us to understand the code.
 
 [⇪](#UP)
