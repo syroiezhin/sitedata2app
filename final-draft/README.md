@@ -55,4 +55,24 @@ else:
     print(text:="Error: you did entered something wrong")
     lbl['text'] = text
 ```
+> The __wbs_IP.py__ file differs from the __website-IP.py__ template in two places.
+- [X] The first amendment was made in order to fill the __text__ variable, which we will return to the main program __tk_wbs_IP.py__.
+```python
+for name,info in data.items(): 
+    if name == '[IP]': text = f'{name} : {info}'
+    elif name == '[Сoordinates]': text = text + "; " + f'{name} : {info}'
+    else: text = text + "; " + f'{name} : {info}'
+    print(f'{name}:{info}')
+```
+- [X] The second amendment is needed in order to call this file from the main program and return the __hostname__ parameter to it.
+```python
+~~if __name__ == '__main__':~~
+def main(hostname):
+    ~~hostname = input(Figlet(font='slant').renderText('Enter URL :'))~~
+    text,lat,lon,reg,ip,org = get_info_by_ip(get_ip_by_hostname(hostname))
+    html_file = marker(lat,lon,reg,ip,org)
+    run_html_file(html_file)
+    return text
+```
+
 [⇪](#UP)
