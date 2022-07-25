@@ -7,7 +7,9 @@
 ### tk_wbs_IP.py
 
 > Let's start with the fact that we have improved the input field.
--[X] A variable that holds the entered value.
+
+- [X] 
+- [X] A variable that holds the entered value.
 -[X] Input field.
 -[X] Text inside the field.
 -[X] Specify the place to display the input field.
