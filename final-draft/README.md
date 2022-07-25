@@ -5,5 +5,7 @@
 > Here soon will be described how this program is implemented!
 
 - [X] 
+- [X] 
+- [X] 
 
 [⇪](#UP)
