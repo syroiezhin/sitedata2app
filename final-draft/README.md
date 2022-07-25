@@ -8,14 +8,14 @@
 
 > Let's start with the fact that we have improved the input field.
 
-- [X] 
+
 - [X] A variable that holds the entered value.
--[X] Input field.
--[X] Text inside the field.
--[X] Specify the place to display the input field.
--[X] Assign the __click__ function to the input field.
--[X] Assign the __cursor__ function to the input field.
--[X] We instantly update this object to see the result of our assignments.
+- [X] Input field.
+- [X] Text inside the field.
+- [X] Specify the place to display the input field.
+- [X] Assign the __click__ function to the input field.
+- [X] Assign the __cursor__ function to the input field.
+- [X] We instantly update this object to see the result of our assignments.
 ```python
 info = tk.StringVar()
 data = tk.Entry(bg='#cfaf32', fg='#2f3f4f', textvariable=info)
@@ -25,14 +25,14 @@ data.bind("<Button-1>",click)
 data.bind("<Leave>",cursor)
 data.update()
 ```
--[X] We need the first __click__ function to remove __the label__ (ENTER URL ...) from the input field.
+- [X] We need the first __click__ function to remove __the label__ (ENTER URL ...) from the input field.
 ```python
 def analise():
     if data.get() == 'ENTER URL ...': data.delete(0,'end')
     
 def click(*args): analise()
 ```
--[X] We need the second __cursor__ function to return __the label__ (ENTER URL ...) in the input field if it does not contain text.
+- [X] We need the second __cursor__ function to return __the label__ (ENTER URL ...) in the input field if it does not contain text.
 ```python
 def cursor(*args):
     win.focus()
