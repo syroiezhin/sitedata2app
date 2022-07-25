@@ -66,9 +66,7 @@ for name,info in data.items():
 ```
 - [X] The second amendment is needed in order to call this file from the main program and return the __hostname__ parameter to it.
 ```python
-~~if __name__ == '__main__':~~
 def main(hostname):
-    ~~hostname = input(Figlet(font='slant').renderText('Enter URL :'))~~
     text,lat,lon,reg,ip,org = get_info_by_ip(get_ip_by_hostname(hostname))
     html_file = marker(lat,lon,reg,ip,org)
     run_html_file(html_file)
