@@ -39,5 +39,20 @@ def cursor(*args):
     analise()
     if data.get() == '': data.insert(0,'ENTER URL ...')
 ```
-
+> When the __RESULT__ button is pressed, the __processing_data_in_the_wbs_IP_py()__ function is called. In this function, errors will be processed and if there are none, the program will display the result in the __Label()__.
+- [X] When pressing the __RESULT__ button, if the field was empty, or consisted of spaces, or contains source text (ENTER URL...), the program will generate an error (Error: you didn't enter a url).
+- [X] In the best case, the program will start processing the result and display the obtained information in the __Label()__ field.
+- [X] When you click on the __RESULT__ button, if the field contains something that did not pass the filter, the program will generate an error (Error: you did entered something wrong).
+```python
+if (info.get() == 'ENTER URL ...') or (info.get().replace(' ', '') == ''):
+    print(text:="Error: you didn't enter a url")
+    lbl['text'] = text
+elif info.get().count('.')<3 and (bttn['state'] == tk.NORMAL): 
+    bttn['state'] = tk.DISABLED
+    print("please wait...")
+    lbl['text'] = wbs_IP.main(info.get())
+else: 
+    print(text:="Error: you did entered something wrong")
+    lbl['text'] = text
+```
 [⇪](#UP)
