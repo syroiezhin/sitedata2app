@@ -84,4 +84,55 @@ option = webdriver.ChromeOptions()
         driver = webdriver.Chrome(service=Service(f"/USER/v.syroiezhin/.wdm/drivers/chromedriver/mac64/103.0.5060.53/chromedriver"), options=option)
         driver.get("file://" + f"/USER/v.syroiezhin/{html_file}")
 ```
+
+### Let's go back to tk-wbs-ip.py
+
+> Now we can create our first app file.
+- [X] Download:
+```python
+pip install py2app
+```
+- [X] We enter the following script into the terminal to update all libraries to the latest version and could be compatible:
+```python
+for i in $(pip list -o | awk 'NR > 2 {print $1}'); do sudo pip install -U $i; done
+```
+- [X] We go to the desired directory of the program using cd: `cd Desktop/NameFolder/FolderProject`
+- [X] Make sure the required py is in your directory with the command: `ls`
+- [X] Create setup.py with:
+```
+py2applet --make-setup nameProject.py
+```
+- [X] Create an alpha version, for a sanity test:
+```
+python3 setup.py -A
+```
+- [X] Run app file in dist folder.
+- [X] If everything works as expected, then __delete both appeared folders (build and dist)__ and create the final version of the app:
+```
+python3 setup.py
+```
+#### Please note that for a console application you will not be able to create an app file!
+> An example of the contents of the setup.py file:
+```python
+from setuptools import setup
+
+APP = ['project.py']
+APP_NAME = 'TITLE'
+DATA_FILES = []
+OPTIONS = {
+    'iconfile': 'icon.png', 
+    'packages':[],
+    'argv_emulation' : False,
+    'plist': {}
+}
+
+setup(
+    app=APP,
+    name=APP_NAME,
+    data_files=DATA_FILES,
+    options={'py2app': OPTIONS},
+    setup_requires=['py2app']
+)
+```
+
 [⇪](#UP)
