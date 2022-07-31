@@ -92,9 +92,12 @@ option = webdriver.ChromeOptions()
 - [X] We enter the following script into the terminal to update all libraries to the latest version and could be compatible:
 ```python
 conda install -c anaconda anaconda-navigator
+```
+```python
 for i in $(pip list -o | awk 'NR > 2 {print $1}'); do sudo pip install -U $i; done
 ```
-<img width="851" alt="image" src="https://user-images.githubusercontent.com/86792918/182037292-4eeb693e-5580-4d9e-b588-f010e18af789.png">
+<p><img width="851" alt="image" src="https://user-images.githubusercontent.com/86792918/182037292-4eeb693e-5580-4d9e-b588-f010e18af789.png"></p>
+
 - [X] Install:
 ```python
 pip install py2app
