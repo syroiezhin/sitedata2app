@@ -117,7 +117,7 @@ python3 setup.py -A
 ```
 python3 setup.py
 ```
-#### Please note that for a console application you will not be able to create an app file!
+#### Note that we can also create an app-file for a console application, but we'll do it in the [console2app](https://github.com/syroiezhin/console2app) repository!
 > An example of the contents of the setup.py file:
 ```python
 from setuptools import setup
