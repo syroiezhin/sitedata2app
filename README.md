@@ -88,13 +88,16 @@ option = webdriver.ChromeOptions()
 ### Let's go back to tk-wbs-ip.py
 
 > Now we can create our first app file.
-- [X] Download:
-```python
-pip install py2app
-```
+- [X] [Download!](https://www.anaconda.com/products/distribution#macos:~:text=Installer%20(488%20MB)-,MacOS,-Python%203.9)
 - [X] We enter the following script into the terminal to update all libraries to the latest version and could be compatible:
 ```python
+conda install -c anaconda anaconda-navigator
 for i in $(pip list -o | awk 'NR > 2 {print $1}'); do sudo pip install -U $i; done
+```
+<img width="851" alt="image" src="https://user-images.githubusercontent.com/86792918/182037292-4eeb693e-5580-4d9e-b588-f010e18af789.png">
+- [X] Install:
+```python
+pip install py2app
 ```
 - [X] We go to the desired directory of the program using cd: `cd Desktop/NameFolder/FolderProject`
 - [X] Make sure the required py is in your directory with the command: `ls`
