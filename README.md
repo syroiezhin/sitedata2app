@@ -108,15 +108,20 @@ pip install py2app
 ```
 py2applet --make-setup nameProject.py
 ```
-- [X] Create an alpha version, for a sanity test:
+- [X] We create a finished product:
 ```
-python3 setup.py -A
+python3 setup.py py2app
 ```
-- [X] Run app file in dist folder.
-- [X] If everything works as expected, then __delete both appeared folders (build and dist)__ and create the final version of the app:
+- [X] In case of error "No such file or directory: ... zmq/.dylibs" you will have to reinstall first by deleting:
 ```
-python3 setup.py
+conda remove zeromq
 ```
+- [X] ... and then install without errors getting the result after you try again (`python3 setup.py py2app`).
+```
+conda install zeromq
+```
+
+
 #### Note that we can also create an app-file for a console application, but we'll do it in the [console2app](https://github.com/syroiezhin/console2app) repository!
 > An example of the contents of the setup.py file:
 ```python
