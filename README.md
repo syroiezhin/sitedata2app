@@ -127,8 +127,6 @@ conda install zeromq
 ```python
 from setuptools import setup
 
-from setuptools import setup
-
 APP_NAME = 'URL2IP'
 APP = ['tk_wbs_IP.py']
 
