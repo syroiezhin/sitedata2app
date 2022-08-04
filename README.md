@@ -127,22 +127,29 @@ conda install zeromq
 ```python
 from setuptools import setup
 
-APP = ['project.py']
-APP_NAME = 'TITLE'
-DATA_FILES = []
-OPTIONS = {
-    'iconfile': 'icon.png', 
-    'packages':[],
-    'argv_emulation' : False,
-    'plist': {}
-}
+from setuptools import setup
+
+APP_NAME = 'URL2IP'
+APP = ['tk_wbs_IP.py']
+
+DATA_FILES = ['wbs_IP.py','icon.png']
+OPTIONS = {'iconfile': 'icon.png'}
 
 setup(
     app=APP,
     name=APP_NAME,
     data_files=DATA_FILES,
+    setup_requires=['py2app'],
     options={'py2app': OPTIONS},
-    setup_requires=['py2app']
+
+    version='2022.07.25',
+    description='site data search',
+    long_description="Getting IP and information about the site knowing the url address",
+
+    author='@NEU3RON',
+    license="Syroiezhin",
+    author_email='v.syroiezhin@gmail.com',
+    url="https://github.com/syroiezhin",
 )
 ```
 
